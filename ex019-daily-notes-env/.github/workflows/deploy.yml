@@ -36,7 +36,7 @@ jobs:
         context: ./frontend
         file: ./frontend/Dockerfile
         push: true
-        tags: korarak777/nuxt-frontend:latest
+        tags: pxlm1z/nuxt-frontend:latest
         build-args: |
           VITE_API_URL=${{ secrets.VITE_API_URL }}
 
@@ -48,8 +48,8 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd ~/ex10-daily-notes
-          docker pull korarak777/flask-backend:latest
-          docker pull korarak777/nuxt-frontend:latest
+          cd ~/19-daily-notes
+          docker pull pxlm1z/flask-backend:latest
+          docker pull pxlm1z/nuxt-frontend:latest
           docker compose down
           docker compose up -d
